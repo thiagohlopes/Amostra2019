@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MPT</string>
+
+    <string-array name="Peso_array">
+        <item>Kg</item>
+        <item>g</item>
+        <item>L</item>
+        <item>ml</item>
+    </string-array>
+</resources>

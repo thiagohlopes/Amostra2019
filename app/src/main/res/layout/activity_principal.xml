@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Aplicacao.Principal">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#FF8500"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/ic_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#FF8500"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_pesquisa"
+            android:onClick="onClick_ib_pesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#FF8500"
+            app:srcCompat="@drawable/ic_search_white_36dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:onClick="onClick_ib_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="#FF8500"
+            app:srcCompat="@drawable/ic_home_white_36dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/ib_carrinho"
+            android:onClick="onClick_ib_carrinho"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#FF8500"
+            app:srcCompat="@drawable/ic_shopping_cart_white_36dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BEM VINDO AO FLARY"
+        android:textColor="#FF8500"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tv_prodDestaque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="PRODUTO DESTAQUE"
+        android:textColor="#FF000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bemVindo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_prodDestaque">
+
+        <ImageView
+            android:id="@+id/iv_produto_destaque"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#000000"
+            app:srcCompat="@drawable/ic_find_in_page_white_36dp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Produto:  "
+                    android:textColor="#FF000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_prodDestaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#FF000000"
+                    android:textSize="20dp"
+                    tools:hint="Produto aqui" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Preço:   "
+                    android:textColor="#FF000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_precoDestaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:textColor="#FF000000"
+                    android:textSize="20dp"
+                    tools:hint="Preço aqui" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Mercado:   "
+                    android:textColor="#FF000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_mercadoDestaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#FF000000"
+                    android:textSize="20dp"
+                    tools:hint="Mercado aqui" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_cupom"
+        android:layout_width="161dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="35dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:onClick="onClick_ib_cupom"
+        android:tint="#00EC1717"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/ic_desconto" />
+
+    <ImageButton
+        android:id="@+id/ib_mercado"
+        android:layout_width="254dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="16dp"
+        android:background="@null"
+        android:onClick="onClick_ib_mercado"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_cupom"
+        app:layout_constraintVertical_bias="0.261"
+        app:srcCompat="@drawable/ic_markets" />
+
+    <ImageButton
+        android:id="@+id/ib_produto"
+        android:layout_width="255dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:background="@null"
+        android:onClick="onClick_ib_produto"
+        app:layout_constraintStart_toEndOf="@+id/ib_cupom"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/ic_produtos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
